@@ -304,9 +304,7 @@ document.getElementById("leave-btn").addEventListener("click", function () {
   const styledContent = `<style>  p {    font-size: 23px;    font-family: Arial, sans-serif;  } strong {    font-size: 28px;    font-family: Arial, sans-serif;   text-align: center;margin:0; }</style> <strong> ${TitleLine}</strong> <br> <p>${downloadVersion}</p>`;
   let confirmed = confirm("Are you sure you want to leave?");
   if (confirmed) {
-    const blob = new Blob([styledContent], {
-      type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    });
+    const blob = new Blob([styledContent], { type: "text/plain" });
 
     // Create a link element to initiate the download
     const link = document.createElement("a");
