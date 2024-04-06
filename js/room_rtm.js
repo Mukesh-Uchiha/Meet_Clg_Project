@@ -302,7 +302,7 @@ document.getElementById("leave-btn").addEventListener("click", function () {
   let TitleLine = `Transcript_On_${RoomName}_(${getCurrentDateTime()})_Meet`;
   let downloadVersion = PdfVersion.replace(/\n/g, " ").trim();
   const styledContent = `<style>  p {    font-size: 23px;    font-family: Arial, sans-serif;  } strong {    font-size: 28px;    font-family: Arial, sans-serif;   text-align: center;margin:0; }</style> <strong> ${TitleLine}</strong> <br> <p>${downloadVersion}</p>`;
-  let confirmed = confirm("Are you sure you want to leave?");
+  let confirmed = confirm("Do you want to download the transcript?");
   if (confirmed) {
     const blob = new Blob([styledContent], { type: "text/plain" });
 
